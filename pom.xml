@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.technologybrewery</groupId>
         <artifactId>parent</artifactId>
-        <version>1</version>
+        <version>11</version>
     </parent>
 
     <groupId>org.technologybrewery.reinheitsgebot</groupId>
     <artifactId>reinheitsgebot</artifactId>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Reinheitsgbot</name>
@@ -50,42 +50,19 @@
         <version.enforcer>3.1.0</version.enforcer>
     </properties>
 
+    <modules>
+        <module>reinheitsgebot-rules</module>
+        <module>reinheitsgebot-test</module>
+    </modules>
+
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <configuration>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <useReleaseProfile>false</useReleaseProfile>
-                    <releaseProfiles>ossrh-release</releaseProfiles>
-                    <goals>deploy</goals>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <modules>
-                <module>reinheitsgebot-rules</module>
-                <module>reinheitsgebot-test</module>
-            </modules>
-        </profile>
-    </profiles>
 
 </project>
