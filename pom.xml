@@ -47,12 +47,11 @@
   </scm>
 
     <properties>
-        <version.enforcer>3.1.0</version.enforcer>
+        <version.enforcer>3.5.0</version.enforcer>
     </properties>
 
     <modules>
         <module>reinheitsgebot-rules</module>
-        <module>reinheitsgebot-test</module>
     </modules>
 
     <build>
