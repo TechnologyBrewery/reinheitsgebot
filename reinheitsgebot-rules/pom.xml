@@ -13,7 +13,7 @@
 
     <properties>
         <version.cucumber>7.5.0</version.cucumber>
-        <version.maven>3.6.1</version.maven>
+        <version.maven>3.6.3</version.maven>
     </properties>
 
     <build>
@@ -69,31 +69,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.enforcer</groupId>
-            <artifactId>enforcer-rules</artifactId>
-            <version>${version.enforcer}</version>
-            <scope>test</scope>
-            <type>test-jar</type>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugin-testing</groupId>
-            <artifactId>maven-plugin-testing-harness</artifactId>
-            <version>3.3.0</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <artifactId>plexus-container-default</artifactId>
-                    <groupId>org.codehaus.plexus</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>4.6.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
